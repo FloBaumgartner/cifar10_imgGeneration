@@ -142,30 +142,5 @@ def plot_shapes(x, y):
     plt.show()
 
 
-# In[142]:
-
-
-gen = GeneratorShapes(10)
-x0, y0, x, y, = gen.generate()
-plot_shapes(y0,y)
-
-
-# In[145]:
-
-
-training_data = Shapes1dDataset(10000,10)
-training_loader = DataLoader(training_data, batch_size=32, shuffle=True)
-
-
-# In[147]:
-
-
-_x, _y = next(iter(training_loader))
-plot_shapes(_x[0],_y[0])
-
-
-# In[ ]:
-
-
 
 
